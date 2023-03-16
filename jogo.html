@@ -13,11 +13,16 @@
 </head>
 <body>
   <main data-theme="dark">
-    <header class="flex align-center justify-between">
-      <h1>JOGO DA VELHA</h1>
-      <button id="themeSwitcher">Switch Theme: Dark/Light</button>
+    <header class="titulo">
+      <h1>JOGO DA VELHA</h1>      
     </header>
-    <input type="text" id="input">
+    <div id="turno">
+      <input type="text" id="input" placeholder="Jogador 1">
+      <input type="text" id="input" placeholder="Jogador 2">
+    </div>
+    <div class="botao">
+    <button id="copyToClipboard">START</button>
+    </div>
     <div id="keys">
       <button class="charKey" data-value="a1"></button>
       <button class="charKey" data-value="a2"></button>
@@ -31,9 +36,11 @@
 
     </div>
     <section class="flex align-center justify-between">
-      <button id="copyToClipboard">START</button>
+      
       <input type="text" id="result" disabled>
     </section>
+    <br>
+    <button id="themeSwitcher">Switch Theme: Dark/Light</button>
   </main>
 </body>
 </html>
