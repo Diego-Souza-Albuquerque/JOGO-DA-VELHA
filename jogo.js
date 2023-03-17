@@ -8,17 +8,19 @@ let playerTwo
 document.querySelectorAll('.charKey').forEach( (charKeyBtn) => {
     charKeyBtn.addEventListener('click', () => {
       
-      charKeyBtn.textContent = jogada
-      
+      charKeyBtn.textContent = jogada      
 
       if (jogada === "X"){
         jogadasX.push(charKeyBtn.dataset.value)
-        console.log("Jogadas X: " + jogadasX )
+        document.getElementById('result').value = "É a vez de " + document.getElementById('input2').value
+        console.log("Jogadas X: " + jogadasX)
         verificar()
         jogada = "O"
+        element.classList.remove('keys')
       } else{
         jogadasO.push(charKeyBtn.dataset.value)
-        console.log("Jogadas O: " + jogadasO )
+        document.getElementById('result').value = "É a vez de " + document.getElementById('input1').value
+        console.log("Jogadas O: " + jogadasO)
         verificar()
         jogada = "X"
       }
@@ -26,7 +28,7 @@ document.querySelectorAll('.charKey').forEach( (charKeyBtn) => {
 })
 
 
-document.getElementById('copyToClipboard').addEventListener('click', (ev) => {
+document.getElementById('start').addEventListener('click', (ev) => {
     const button = ev.currentTarget
     playerOne = document.getElementById('input1').value
     playerTwo = document.getElementById('input2').value
@@ -34,6 +36,7 @@ document.getElementById('copyToClipboard').addEventListener('click', (ev) => {
     console.log(playerTwo)
     if (button.innerText === 'START') {
       button.innerText = 'COMEÇOU'
+      document.getElementById('result').value = "É a vez de " + document.getElementById('input1').value
       button.classList.add('success')
       jogada = "X"
     }
@@ -73,3 +76,7 @@ function gameOver(vencedor){
     document.getElementById('result').value = playerTwo + " Venceu!!!"  
   }
 }
+
+function disableRegion(element) {
+  element.classList.remove('cursor-pointer')
+  element.removeEventListener('click', handleBoardClick)}

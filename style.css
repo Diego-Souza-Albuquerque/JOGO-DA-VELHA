@@ -40,7 +40,7 @@ input {
   align-items: center;
 }
 
-#copyToClipboard {
+#start {
   background-color: transparent;
   border: solid var(--border-color);
   border-width: 2px;
@@ -96,7 +96,7 @@ button {
 #keys {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 70px 70px 70px;
+  grid-template-rows: 80px 80px 80px;
   height: auto;
   gap: 1rem;
   margin: 2rem 0;
