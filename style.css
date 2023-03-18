@@ -95,11 +95,10 @@ button {
 
 #keys {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 80px 80px 80px;
-  height: auto;
-  gap: 1rem;
-  margin: 2rem 0;
+  grid-template-columns: repeat(3, 10rem);
+  grid-template-rows: 100px 100px 100px;
+  gap: .8rem;
+  margin: 2rem 3.3rem 2rem;
 }
 
 #keys button {
@@ -107,7 +106,7 @@ button {
   cursor: pointer;
   font-size: 1.5rem;
   padding: 1rem;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 #keys button:hover {
