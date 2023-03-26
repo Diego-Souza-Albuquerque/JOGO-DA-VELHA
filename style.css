@@ -72,14 +72,14 @@ header {
   padding: 2rem 0;
 }
 
-#themeSwitcher {
+#restart {
   background-color: var(--bg-color);
   border: 0.125rem solid var(--font-color);
   color: var(--font-color);
   max-width: 12.5rem;
 }
 
-#themeSwitcher:hover {
+#restart:hover {
   background-color: var(--font-color);
   color: var(--bg-color);
 }
