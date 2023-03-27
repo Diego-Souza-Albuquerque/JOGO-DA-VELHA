@@ -1,9 +1,3 @@
-/* * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  } */
-
 :root {
   --bg-color: #212529;
   --border-color: #666;
@@ -54,6 +48,31 @@ input {
   width: 19rem;
 }
 
+#start:hover {
+  background-color: var(--font-color);
+  color: var(--bg-color);
+}
+
+#restart {
+  background-color: transparent;
+  border: solid var(--border-color);
+  border-width: 2px;
+  border-radius: 1rem;
+  color: var(--font-color);
+  font-size: 19px;
+  cursor: pointer;
+  display: block;
+  margin-left: 10rem;
+  height: 3.25rem;
+  width: 19rem;
+}
+
+#restart:hover {
+  background-color: var(--font-color);
+  color: var(--bg-color);
+}
+
+
 body {
   background-color: var(--bg-color);
   color: var(--font-color);
@@ -70,18 +89,6 @@ main {
 
 header {
   padding: 2rem 0;
-}
-
-#restart {
-  background-color: var(--bg-color);
-  border: 0.125rem solid var(--font-color);
-  color: var(--font-color);
-  max-width: 12.5rem;
-}
-
-#restart:hover {
-  background-color: var(--font-color);
-  color: var(--bg-color);
 }
 
 button {
@@ -101,7 +108,7 @@ button {
   margin: 2rem 3.3rem 2rem;
 }
 
-#keys button {
+.charKey {
   color: var(--bg-color);
   cursor: pointer;
   font-size: 1.5rem;
@@ -109,7 +116,7 @@ button {
   font-size: 60px;
 }
 
-#keys button:hover {
+.charKey:hover {
   filter: brightness(0.8);
 }
 
