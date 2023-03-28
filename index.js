@@ -5,6 +5,7 @@ let jogadas = []
 let playerOne
 let playerTwo
 let jogada = ""
+let placar =[0,0]
 
 // evento para começar o jogo: Clicando no botão 'Start'
 document.getElementById('start').addEventListener('click', (ev) => {
@@ -145,6 +146,9 @@ function gameOver(vencedor, plays) {
     document.querySelectorAll(`[data-value=${plays[2]}`).forEach((button) => {
       button.style.color = 'red'
     })
+    placar = [+1,]
+    document.getElementById('placar1').value = placar[0]
+    
     return true
 
   } else {
@@ -158,6 +162,8 @@ function gameOver(vencedor, plays) {
     document.querySelectorAll(`[data-value=${plays[2]}`).forEach((button) => {
       button.style.color = 'red'
     })
+    placar = [,+1]
+    document.getElementById('placar2').value = placar[1]
   } true
 }
 

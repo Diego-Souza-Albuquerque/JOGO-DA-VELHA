@@ -1,48 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-  <title>JOGO DA VELHA</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="./index.js" defer></script>
-</head>
-<body>
-  <main data-theme="dark">
-    <header class="titulo">
-      <h1>JOGO DA VELHA</h1>      
-    </header>
-    
-    <div id="turno">
-      <input type="text" id="input1" placeholder="Jogador 1">
-      <input type="text" id="input2" placeholder="Jogador 2">
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>JOGO DA VELHA</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <main data-theme="dark">
+      <header class="titulo">
+        <h1>JOGO DA VELHA</h1>
+      </header>
+      <div id="turno">
+        <input type="text" id="input1" placeholder="Jogador 1" />
+        <input type="text" id="placar1" disabled />
+        <input type="text" id="input2" placeholder="Jogador 2" />
+        <input type="text" id="placar2" disabled />
+      </div>
 
-    <div class="botao">
-    <button id="start">START</button>
-    </div>
+      <div class="botao">
+        <button id="start">START</button>
+      </div>
 
-    <div id="keys">
-      <button class="charKey" data-value="a1"></button>
-      <button class="charKey" data-value="a2"></button>
-      <button class="charKey" data-value="a3"></button>
-      <button class="charKey" data-value="b1"></button>
-      <button class="charKey" data-value="b2"></button>
-      <button class="charKey" data-value="b3"></button>
-      <button class="charKey" data-value="c1"></button>
-      <button class="charKey" data-value="c2"></button>
-      <button class="charKey" data-value="c3"></button>
-
-    </div>
-    <section class="flex align-center justify-between">
-      
-      <input type="text" id="result" disabled>
-    </section>
-       
-  </main>
-</body>
+      <div id="keys">
+        <button class="charKey" data-value="a1"></button>
+        <button class="charKey" data-value="a2"></button>
+        <button class="charKey" data-value="a3"></button>
+        <button class="charKey" data-value="b1"></button>
+        <button class="charKey" data-value="b2"></button>
+        <button class="charKey" data-value="b3"></button>
+        <button class="charKey" data-value="c1"></button>
+        <button class="charKey" data-value="c2"></button>
+        <button class="charKey" data-value="c3"></button>
+      </div>
+      <section class="flex align-center justify-between">
+        <input type="text" id="result" disabled />
+      </section>
+    </main>
+  </body>
 </html>
