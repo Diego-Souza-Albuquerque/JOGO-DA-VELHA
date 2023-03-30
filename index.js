@@ -1,4 +1,6 @@
 const root = document.querySelector("button")
+const secondsEl = document.querySelector("#seconds");
+const millisecondsEl = document.querySelector("#milliseconds");
 let jogadasX = []
 let jogadasO = []
 let jogadas = []
@@ -6,13 +8,18 @@ let playerOne
 let playerTwo
 let jogada = ""
 let placar =[0,0]
+let seconds = 10;
+let milliseconds = 0;
+let interval;
+let start = false;
 
 // evento para começar o jogo: Clicando no botão 'Start'
 document.getElementById('start').addEventListener('click', (ev) => {
   const button = ev.currentTarget
+  startTimer()
   playerOne = document.getElementById('input1').value
   playerTwo = document.getElementById('input2').value
-  button.innerText = 'COMEÇOU!'
+  button.innerText = 'RESTART'
   document.getElementById('result').value = "É a vez de " + document.getElementById('input1').value
   button.classList.add('success')
   jogada = "X"
@@ -20,7 +27,7 @@ document.getElementById('start').addEventListener('click', (ev) => {
 
 document.querySelectorAll('.charKey').forEach((keyBtn) => {
   keyBtn.addEventListener('click', function clicar() {
-
+    
     switch (jogada) {
 
       case "X":
@@ -44,7 +51,7 @@ document.querySelectorAll('.charKey').forEach((keyBtn) => {
         break
 
       case "":
-        document.getElementById('result').value = "Clique nos botões Start ou Restart"
+        document.getElementById('result').value = "Clique no botão Start"
         break
 
       default:
@@ -170,4 +177,31 @@ function gameOver(vencedor, plays) {
 
 function empate() {
   document.getElementById('result').value = "OCORREU UM EMPATE!"
+}
+
+
+function startTimer() {
+
+  interval = setInterval(() => {
+    if (!start) {
+      milliseconds += 10
+
+      if (milliseconds === 1000) {
+        seconds--;
+        milliseconds = 0
+      }
+
+      if (seconds === 0) {
+        secondsEl.textContent = "Acabou!"
+        stopTimer(interval)
+      }
+
+      secondsEl.textContent = seconds
+      millisecondsEl.textContent = ""
+    }
+  }, 10)
+}
+
+function stopTimer(interval) {
+  clearInterval(interval)
 }

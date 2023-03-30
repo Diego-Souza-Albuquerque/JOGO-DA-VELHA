@@ -10,15 +10,20 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <title>JOGO DA VELHA</title>
     <link rel="stylesheet" href="style.css" />
     <script src="./index.js" defer></script>
+    <script src="./time.js" defer></script>
   </head>
   <body>
     <main data-theme="dark">
-      <header class="titulo">
-        <h1>JOGO DA VELHA</h1>
-      </header>
+      <h1>JOGO DA VELHA</h1>
       <div id="turno">
         <input type="text" id="input1" placeholder="Jogador 1" />
         <input type="text" id="placar1" disabled />
@@ -26,8 +31,12 @@
         <input type="text" id="placar2" disabled />
       </div>
 
-      <div class="botao">
-        <button id="start">START</button>
+        <div class="container">
+        <input class="status" type="text" id="result" disabled />
+        <div class="timer">          
+          <div class="time" id="seconds"></div>
+          <div class="time" id="milliseconds"></div>
+        </div>  
       </div>
 
       <div id="keys">
@@ -41,9 +50,9 @@
         <button class="charKey" data-value="c2"></button>
         <button class="charKey" data-value="c3"></button>
       </div>
-      <section class="flex align-center justify-between">
-        <input type="text" id="result" disabled />
-      </section>
+            <button id="start">START</button>
+        </div>
+      </div>
     </main>
   </body>
 </html>
