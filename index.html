@@ -10,16 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
     <title>JOGO DA VELHA</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="./index.js" defer></script>
-    <script src="./time.js" defer></script>
+    <script src="./index.js" type="module" defer></script>
+    <script src="./time.js" type="module" defer></script>
   </head>
   <body>
     <main data-theme="dark">
@@ -31,12 +29,12 @@
         <input type="text" id="placar2" disabled />
       </div>
 
-        <div class="container">
+      <div class="container">
         <input class="status" type="text" id="result" disabled />
-        <div class="timer">          
+        <div class="timer">
           <div class="time" id="seconds"></div>
           <div class="time" id="milliseconds"></div>
-        </div>  
+        </div>
       </div>
 
       <div id="keys">
@@ -50,9 +48,7 @@
         <button class="charKey" data-value="c2"></button>
         <button class="charKey" data-value="c3"></button>
       </div>
-            <button id="start">START</button>
-        </div>
-      </div>
+      <button id="start">START</button>
     </main>
   </body>
 </html>

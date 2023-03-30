@@ -1,6 +1,5 @@
-const root = document.querySelector("button")
-const secondsEl = document.querySelector("#seconds");
-const millisecondsEl = document.querySelector("#milliseconds");
+import { startTimer } from "./time.js"
+
 let jogadasX = []
 let jogadasO = []
 let jogadas = []
@@ -8,10 +7,6 @@ let playerOne
 let playerTwo
 let jogada = ""
 let placar =[0,0]
-let seconds = 10;
-let milliseconds = 0;
-let interval;
-let start = false;
 
 // evento para começar o jogo: Clicando no botão 'Start'
 document.getElementById('start').addEventListener('click', (ev) => {
@@ -180,28 +175,3 @@ function empate() {
 }
 
 
-function startTimer() {
-
-  interval = setInterval(() => {
-    if (!start) {
-      milliseconds += 10
-
-      if (milliseconds === 1000) {
-        seconds--;
-        milliseconds = 0
-      }
-
-      if (seconds === 0) {
-        secondsEl.textContent = "Acabou!"
-        stopTimer(interval)
-      }
-
-      secondsEl.textContent = seconds
-      millisecondsEl.textContent = ""
-    }
-  }, 10)
-}
-
-function stopTimer(interval) {
-  clearInterval(interval)
-}
