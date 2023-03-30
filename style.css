@@ -21,12 +21,35 @@ h1{
   padding: 1rem;
 }
 
+#input1{
+  border: none;
+	border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 1px solid white; 
+}
+
 #input2{
-  margin-left: 5.2rem;  
+  margin-left: 5.2rem;
+  border: none;
+	border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-top: 1px solid white; 
+}
+
+#placar1{
+  margin-left: -2px;
+  border: none;
+	border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
 }
 
 #placar2{
-  margin-left: 5.2rem;  
+  margin-left: 5rem;
+  border: none;
+	border-bottom: 1px solid white;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
 }
 
 .status {
@@ -52,9 +75,15 @@ input {
   justify-content: center;
 }
 
+#cronometro {
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+
 .timer {
   display: flex;
-  font-size: 38px;
+  font-size: 40px;
   font-weight: bold;
   color: #f53838;
   border: 5px;

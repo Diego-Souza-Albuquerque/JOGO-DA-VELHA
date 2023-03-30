@@ -6,7 +6,7 @@ let interval;
 let start = false;
 
 export function startTimer() {
-
+  document.getElementById("cronometro").style.display = "block";
   interval = setInterval(() => {
     if (!start) {
       milliseconds += 10
